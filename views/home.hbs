@@ -8,8 +8,16 @@
 </head>
 <body>
     <h1>Home page</h1>
-    <ul>
-        <li><a herf = "/login>Login</a></li>
-    </ul>
+    {{#if userid}}
+        <h1>Hello {{userid}} - {{role}}</h1>
+         <a href="/needlogin">Need Login Page</a>
+    {{else}}
+        <ul>
+            <li><a href="/login">Login</a></li>
+             <li><a href="/nologin">No Login</a></li>
+              <li><a href="/needlogin">Need Login Page</a></li>
+        </ul>
+    {{/if}}
+    
 </body>
 </html>
